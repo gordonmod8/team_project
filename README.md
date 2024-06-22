@@ -1,6 +1,6 @@
 # Team Project 1
 
-Introduction
+## Introduction
 We decided to use this dataset from kaggle for our 1st Team project -https://github.com/gordonmod8/team_project/blob/team-project-1/team_project_2.md
 The data contains critical features for fraudulent transactions. It contains the following features:
 
@@ -17,7 +17,7 @@ Exploratory Data Analysis (EDA)
 
 An initial analysis of the dataset was conducted to understand the distribution of features and the extent of class imbalance. We created summary statistics and visualizations to help in identifying patterns and potential correlations between features and the target variable, fraud.
 
-Models Applied
+## Models Applied
 
 1. Linear Regression
    First, we applied linear regression as a baseline model to understand the relationship between the features and the target variable.
@@ -41,7 +41,7 @@ Considering the business implications, missing a fraudulent transaction (false n
 The correlation matrix further strengthened our argument to consider multiple variable interaction to predict fraud.
 Also, the coefficients for the sampled data were higher suggesting that a balanced dataset would give us better prediction accuracy.
 
-Addressing Class Imbalance
+## Addressing Class Imbalance
 
 Upon applying the above models, we realized that the dataset is highly imbalanced with 912,597 non-fraud transactions and only 87,403 fraudulent transactions. We implemented several techniques to mitigate this issue:
 
@@ -60,7 +60,8 @@ Bootstrap, estimation error
 Explore what graphs we can display                 - Gordon
 
 
-Result Summary    - Okky
+## Result Summary
+- Okky
 
 Videos of Learning and Experience (Links)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
