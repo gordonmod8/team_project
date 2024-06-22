@@ -49,11 +49,6 @@ Upon applying the above models, we realized that the dataset is highly imbalance
 - Random forest:
 - Logistic regression:
 
-  
-
-
-
-
 
 Undersample:
 Random forest
@@ -66,3 +61,6 @@ Explore what graphs we can display                 - Gordon
 
 
 Result Summary    - Okky
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Links to videos:
+Sarita : https://drive.google.com/file/d/1J7-f0emnaJabHOkSX0Zo0YLDomFkHgPA/view?usp=drive_link
