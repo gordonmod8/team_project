@@ -13,7 +13,7 @@ The data contains critical features for fraudulent transactions. It contains the
 7. online_order
 8. fraud
 
-Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 An initial analysis of the dataset was conducted to understand the distribution of features and the extent of class imbalance. We created summary statistics and visualizations to help in identifying patterns and potential correlations between features and the target variable, fraud.
 
