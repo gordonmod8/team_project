@@ -1,7 +1,7 @@
 # Team Project 1
 
 ## Introduction
-We decided to use this dataset from kaggle for our 1st Team project -https://github.com/gordonmod8/team_project/blob/team-project-1/team_project_2.md
+We decided to use this dataset from kaggle for our [1st Team project](https://github.com/gordonmod8/team_project/blob/team-project-1/team_project_2.md)
 The data contains critical features for fraudulent transactions. It contains the following features:
 
 1. distance_from_home
