@@ -47,7 +47,7 @@ Upon applying the above models, we realized that the dataset is highly imbalance
 
 - Undersampling method: Undersampling the majority class (non-fraud) to create a balanced dataset
   
-- Random forest: We split the downsampled dataset into training and testing and train a random forest model. The confusion matrix yields a high true positive and true negative results. The accuracy is high at 99.99%.
+- Random forest: We split the downsampled dataset into training and testing and train a random forest model. The confusion matrix yields a high true positive and true negative results. The accuracy is high at 99.99%. We calculated the ROC AUC Score and the result is high at 99.99%.
   
 - Logistic regression:
 
