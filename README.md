@@ -25,10 +25,21 @@ Models Applied
    all of the features have very low coefficient value, indicating they have very little influence on the target varible.
 
 2. Multiple Linear Regression with an interaction term
+The multiple regression results also had very low coefficients indicating the individual variables had very low correlation but when we modelled the regression for an interaction term between multiple variables, 
+the coefficients were significantly higher suggesting that the variables together may have a higher accuracy in predicting fraud.
 
-3. K-Nearest Neighbors (KNN)
-4. Confusion Matrix
-5. Correlatoin Matrix
+4. K-Nearest Neighbors (KNN)
+The KNN model with K=3 was highly effective with a high accuracy of 99.8%. But High accuracy might be misleading if the dataset is heavily imbalanced.
+There is a risk of Minority Class Isolation resulting in a high accuracy.Fraudulent transactions, being rare, might not have enough neighboring instances of the same class. 
+This can cause KNN to misclassify them as non-fraudulent because their nearest neighbors are mostly non-fraudulent transactions. Due to limited time, we couldn't try cross validation but that would give us a better understanding of this model.
+
+6. Confusion Matrix
+A high number of true negatives (228984) and true positives (21906) show that the model is very effective at identifying both non-fraudulent and fraudulent transactions.
+Considering the business implications, missing a fraudulent transaction (false negative) might be more critical than incorrectly flagging a legitimate transaction (false positive).
+
+8. Correlation Matrix
+The correlation matrix further strengthened our argument to consider multiple variable interaction to predict fraud.
+Also, the coefficients for the sampled data were higher suggesting that a balanced dataset would give us better prediction accuracy.
 
 Addressing Class Imbalance
 
@@ -43,13 +54,6 @@ Upon applying the above models, we realized that the dataset is highly imbalance
 
 
 
-Original Dataset:
-Linear Regression
-Multiple Reg with interaction term
-KNN
- 3.  Confusion matrix, accuracy
- 4.  Correlation matrix
- 5.  Cross validation         - Sarita
 
 Undersample:
 Random forest
