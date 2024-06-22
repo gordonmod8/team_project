@@ -46,14 +46,14 @@ Addressing Class Imbalance
 Upon applying the above models, we realized that the dataset is highly imbalanced with 912,597 non-fraud transactions and only 87,403 fraudulent transactions. We implemented several techniques to mitigate this issue:
 
 - Undersampling method: Undersampling the majority class (non-fraud) to create a balanced dataset
-- Random forest:
+  
+- Random forest: We split the downsampled dataset into training and testing and train a random forest model. The confusion matrix yields a high true positive and true negative results. The accuracy is high at 99.99%.
+  
 - Logistic regression:
 
 
-Undersample:
-Random forest
 Confusion matrix
-Accuracy
+
 Correlation matrix comparison (higher correlation than the orig)
 Logistic regression
 Bootstrap, estimation error
