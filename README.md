@@ -1,9 +1,11 @@
-# Comparison of Accuracy of Simple Supervised Learning Models in Predicting Credit Card Fraud
-## *Team Project 1 - Group 2*
+# Predicting Credit Card Fraud: 
+## *A Comparison of Supervised Learning Models*
+### UofT-DSI — Team Project 1 
+### Group 2 — Sarita Rana, Elizabeth Yeo, Okky Rijanto, and Gordon Geringas
 
 
 ## Abstract
-Global losses in credit card fraud have risen from over USD 18 B in 2014 to over USD 33 B in 2024 [(Statista)](https://www.statista.com/statistics/1394119/global-card-fraud-losses/). The timely detection of fraud and the application of interventions can help credit institutions attenuate impact of these crimes on a massive scale. There are many statistical models available to apply fraud detection and each will yield a different accuracy. In order to aid in model selection we investigate the accuracy of several supervised learning models in predicting fraud.
+Global losses in credit card fraud have risen from over USD 18 B in 2014 to over USD 33 B in 2024 [(Statista)](https://www.statista.com/statistics/1394119/global-card-fraud-losses/). The timely detection of fraud and the application of interventions can help credit institutions attenuate impact of these crimes on a massive scale. There are many statistical models that could predict fraud from transaction data and each will yield a different accuracy. In order to aid in model selection we investigate the accuracy of several supervised learning models in predicting fraud.
 
 
 ## Introduction
