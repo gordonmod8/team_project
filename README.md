@@ -68,12 +68,12 @@ Agreement on team decisions was determined by a consensus of a quorum present in
 - Okky (Results of comparison indicate (which model) has the best impact on (customer value) for the credit institution.)
 
 
-## Videos of Learning and Experience (Links)
+## Videos of Learning and Experience
 
 
 * Sarita Rana: https://drive.google.com/file/d/1J7-f0emnaJabHOkSX0Zo0YLDomFkHgPA/view?usp=drive_link
 * Elizabeth Yeo: https://drive.google.com/file/d/16CQnj9jih-SSa84uT4QGoKti-7Boy8Pe/view?usp=drive_link
 * Okky Rijanto:
-* Gordon Geringas:
+* Gordon Geringas: https://youtu.be/4JVhbL7WqM4
 
 
