@@ -51,10 +51,8 @@ Agreement on team decisions was determined by a consensus of a quorum present in
 
 ## Results and Conclusions
 
-Regression Methods Results
-
 Multi-variate Regression Model Results
-Key Metrics
+
 R-squared (0.284): This means the model explains about 28.4% of the variation in fraud cases. While it captures some key factors influencing fraud, 71.6% of the variation is still unexplained, suggesting that other important factors are not included in the model.
 F-statistic (26450.00) and Prob (F-statistic: 0.00): The high F-statistic and the p-value of 0.00 show that the model is statistically significant and the variables included are collectively a good fit for explaining fraud.
 
