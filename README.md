@@ -51,22 +51,107 @@ Agreement on team decisions was determined by a consensus of a quorum present in
 
 ## Results and Conclusions
 
+Regression Methods Results
 
-- Okky (Describe method to tabulate results seeking impact on credit institution value)
-- Okky (find rates for table below)
+Multi-variate Regression Model Results
+Key Metrics
+R-squared (0.284): This means the model explains about 28.4% of the variation in fraud cases. While it captures some key factors influencing fraud, 71.6% of the variation is still unexplained, suggesting that other important factors are not included in the model.
+F-statistic (26450.00) and Prob (F-statistic: 0.00): The high F-statistic and the p-value of 0.00 show that the model is statistically significant and the variables included are collectively a good fit for explaining fraud.
+
+Significant Variables
+Intercept (-0.0297): The negative intercept suggests a baseline probability of fraud when all other variables are zero. However, this value needs to be interpreted in the context of other variables.
+distance_from_last_transaction (0.0021): A positive coefficient here means that as the distance from the last transaction increases, the likelihood of fraud also increases. This is highly significant, with a t-value of 116.152.
+ratio_to_median_purchase_price (0.0484): A higher ratio of the transaction amount to the median purchase price is strongly linked to a higher likelihood of fraud.
+distance_from_home (0.0013): Similar to the distance from the last transaction, a greater distance from home is associated with a higher probability of fraud.
+used_chip (0.0101): Transactions using the chip show a slight increase in fraud probability, possibly reflecting sophisticated fraud tactics targeting chip transactions.
+
+Interaction Effects
+distance_from_last_transaction * ratio_to_median_purchase_price (-7.665e-05): This negative interaction suggests that the combined effect of these factors slightly decreases the probability of fraud.
+distance_from_last_transaction * distance_from_home (-1.901e-06): This negative interaction indicates that the combined influence of these two distances slightly reduces the likelihood of fraud.
+ratio_to_median_purchase_price * distance_from_home (-5.945e-05): This negative interaction effect shows that a high ratio to the median purchase price combined with a long distance from home slightly decreases fraud probability.
+distance_from_last_transaction * ratio_to_median_purchase_price * distance_from_home (6.486e-07): This small positive interaction indicates a slight increase in the probability of fraud when these three factors are combined.
+distance_from_last_transaction * used_chip (-0.0021) and ratio_to_median_purchase_price * used_chip (-0.0043): Both interactions have a negative impact, suggesting that using a chip reduces the likelihood of fraud for transactions far from the last transaction and with a high ratio to median purchase price.
+
+Logistics Regression Results
+Log-Likelihood: The model's Log-Likelihood is -36594, compared to the null model's -121170. This significant improvement shows that the model effectively captures important factors influencing fraud.
+Pseudo R-squared (0.6980): About 69.8% of the variation in fraud is explained by the model, indicating a good fit.
+LLR p-value (0.000): The model is statistically significant overall
+
+Significant Variables
+Intercept (-7.7086): This negative value indicates a very low baseline probability of fraud when all other variables are zero.
+Distance from Home (0.0290): As the distance from home increases, so does the likelihood of fraud. This variable is highly significant (z-value: 130.628).
+Distance from Last Transaction (0.0514): A greater distance from the last transaction also correlates with a higher probability of fraud (z-value: 88.346).
+Ratio to Median Purchase Price (1.2289): Transactions that are much higher than the median purchase price strongly indicate fraud (z-value: 180.881).
+Repeat Retailer (-1.4494): Transactions with repeat retailers are less likely to be fraudulent, shown by the negative coefficient and significant z-value of -45.752.
+Used Chip (-1.2277): Using a chip decreases the likelihood of fraud (z-value: -53.908).
+Used PIN Number (-10.2523): Transactions using a PIN number are much less likely to be fraudulent, with a very significant negative coefficient (z-value: -63.503).
+Online Order (5.0528): Online orders have a much higher probability of being fraudulent, as indicated by the large positive coefficient (z-value: 117.244).
+
+Comparison between Multivariate (original sample) and Logistics (undersampled)
+•	Fit and Variability: Logistic regression explains a much larger portion of the variability in fraud (69.8%) compared to the multi-variate regression (28.4%).
+•	Significance: Both models are statistically significant overall.
+•	Strength of Relationships: Logistic regression generally shows stronger relationships between predictors and the likelihood of fraud, as indicated by the larger coefficients.
+•	Direction of Effects: Both models agree on the direction of most effects (e.g., distance from last transaction, ratio to median purchase price), but they differ significantly on the effect of using a chip.
 
 
+Classification Methods Results
+
+KNN
 
 | Model         | Precision | False Negative Rate | False Positive Rate |
 |---------------|-----------|---------------------|---------------------|
-| MVR           | 1.00      | 1.00                | 1.00                |
-| KNN           | **1.00**  | 1.00                | 1.00                |
-| LogR          | 1.00      | 1.00                | 1.00                |
-| RndFor        | 1.00      | 1.00                | 1.00                |
+| KNN           | 0.9947    | 0.0088              | 0.0005              |
+| RndFor        | 0.9999    | 0                   | 0.000046            |
+| LogR          | 0.9361    | 0.0510              | 0.065907            |
 
 
-- Okky (Results of comparison indicate (which model) has the best impact on (customer value) for the credit institution.)
+Model Analysis
+The K-Nearest Neighbors (KNN) model excels with very high precision, a low false negative rate, and an extremely low false positive rate, making it highly effective in detecting fraudulent transactions with minimal errors.
+The Random Forest (RndFor) model is nearly flawless, boasting almost perfect precision and zero false negatives. It accurately identifies all fraudulent transactions and has an exceptionally low false positive rate, making it an ideal model for this dataset.
+In comparison, the Logistic Regression (LogR) model has lower precision and higher false negative and false positive rates. Although it performs reasonably well, it is not as effective as KNN or Random Forest in detecting fraud with minimal errors.
 
+Implications for Detecting Credit Card Fraud
+High Precision and Low False Positive Rate
+
+Random Forest (RndFor): This model's nearly perfect precision and negligible false positive rate make it highly reliable for identifying fraudulent transactions with minimal false alarms. This reliability is crucial for maintaining customer trust and satisfaction, as legitimate transactions are less likely to be wrongly flagged.
+
+KNN: With high precision and low error rates, KNN is also a strong alternative to Random Forest.
+
+Low False Negative Rate
+
+Random Forest (RndFor) and KNN: Both models have extremely low false negative rates, with Random Forest achieving zero false negatives. This ensures that fraudulent transactions are rarely missed, significantly reducing potential financial losses due to fraud.
+
+Business Case for Financial Institutions
+
+Reduction in Financial Losses
+Effective Fraud Detection: Utilizing highly accurate models like Random Forest or KNN can drastically reduce financial losses from undetected fraudulent transactions. The near-zero false negative rate of these models means that almost all fraudulent activities are identified and stopped in time.
+
+Improved Customer Trust and Satisfaction
+
+Minimizing False Positives: Accurate identification of fraudulent transactions and minimal false positives lead to fewer disruptions for customers. This enhances their trust in the financial institution, as their legitimate transactions are less likely to be flagged incorrectly.
+
+Customer Retention: Satisfied customers are more likely to stay with the institution, leading to higher retention rates.
+
+Operational Efficiency
+Resource Allocation: Reliable models allow the institution to allocate fewer resources to manually reviewing transactions, enabling staff to focus on other critical tasks. This improves the efficiency of human resource use and reduces operational costs.
+
+Automated Systems: The reliability of these models supports the development of automated fraud detection systems that can operate in real-time and handle large volumes of transactions without human intervention.
+
+Competitive Advantage
+
+Reputation: A financial institution known for robust fraud detection capabilities gains a competitive edge. Customers are more likely to choose a bank that effectively protects their accounts from fraud.
+
+Market Positioning: Leveraging advanced machine learning models positions the institution as a leader in fintech innovation and security, attracting new customers and partners.
+
+Regulatory Compliance
+
+Meeting Standards: High-performing fraud detection systems help ensure compliance with regulatory standards and guidelines, avoiding potential fines and legal issues.
+
+Reporting and Audits: Accurate and efficient fraud detection facilitates easier reporting and auditing processes, ensuring transparency and accountability.
+
+Conclusion
+
+Adopting highly accurate models like Random Forest and KNN for fraud detection offers substantial benefits for financial institutions. These models minimize financial losses, improve customer satisfaction, enhance operational efficiency, provide a competitive edge, and ensure regulatory compliance. The strong business case for these advanced machine learning models is clear, given their significant positive impact on both the institution's bottom line and customer relations.
 
 ## Videos of Learning and Experience
 
