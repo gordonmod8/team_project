@@ -151,7 +151,7 @@ Adopting highly accurate models like Random Forest and KNN for fraud detection o
 
 * Sarita Rana: https://drive.google.com/file/d/1J7-f0emnaJabHOkSX0Zo0YLDomFkHgPA/view?usp=drive_link
 * Elizabeth Yeo: https://drive.google.com/file/d/16CQnj9jih-SSa84uT4QGoKti-7Boy8Pe/view?usp=drive_link
-* Okky Rijanto:
+* Okky Rijanto: https://drive.google.com/file/d/13zBkafJfQI983ygP92TBxKFybpVrXAC3/view?usp=sharing
 * Gordon Geringas: https://youtu.be/4JVhbL7WqM4
 
 
