@@ -1,7 +1,7 @@
 # Predicting Credit Card Fraud: 
 ## *A Comparison of Supervised Learning Models*
 ### UofT-DSI — Team Project 1 
-### Group 2 — Sarita Rana, Elizabeth Yeo, Okky Rijanto, and Gordon Geringas
+### Group 2 — Sarita Rana, Elizabeth Yeo, Okky Rijanto, Gordon Geringas and Gibran Alvarez Aguilar
 
 
 ## Abstract
