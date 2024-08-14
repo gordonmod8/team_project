@@ -4,8 +4,14 @@
 ### Summary
 1. Data exploration
 
-### Explainable Features
-The preliminary data exploration can give us an idea of correlations latent in the data that we expect the model to make use. After fitting and settling on a best model we can use SHAP values to visualize the explanatory power of the features.
+
+- There are no "Null" values in the dataset
+- The transaction amount is small. The mean of all the transaction amounts is approx. $88.
+- The dataset is highly imbalanced; 99.83% of the transactions were Non-Fraud while 0.17% of the transactions were fraud.
+
+  ![class_distribution](https://github.com/user-attachments/assets/2a0125d3-cd4e-400f-8762-cead28127ace)
+
+- The features other than "Amount" and "Time" have gone through a PCA transformation and were anonymized.
 
 3. Data pre-processing (outliers removal, graphs) (Liz)
    
