@@ -49,8 +49,48 @@ Pipeline 4: Baseline model with stratified splitting of the dataset (ensuring th
 
 Results:
 
+Let's breakdown the Cross-validation results for the three pipelines (pipe1, pipe3, and pipe4) based on the accuracy, f1, and recall metrics.
+
 Pipeline 1 (SMOTE):
+
 Demonstrated a balanced performance with a focus on recall, which is crucial for detecting fraud cases.
+
+1. Accuracy
+   
+Accuracy measures the proportion of correctly classified instances out of the total instances.
+
+pipe1: array([0.99945138, 0.99947333, 0.99940749, 0.99949527, 0.99951722])
+
+pipe3: array([0.99947333, 0.99945138, 0.99938555, 0.99956111, 0.99947333])
+
+pipe4: array([0.99951722, 0.99945138, 0.99947333, 0.99956111, 0.99958305])
+
+All three pipelines demonstrate very high accuracy, close to 1.0, indicating that almost all instances were classified correctly. The differences in accuracy across the pipelines are minimal, suggesting that each pipeline is highly effective in terms of correctly classifying instances overall.
+
+2. F1 Score
+   
+The F1 score is the harmonic mean of precision and recall, giving a balanced measure of a model's performance on both the positive and negative classes.
+
+pipe1: array([0.8427673, 0.83333333, 0.82352941, 0.84768212, 0.85714286])
+
+pipe3: array([0.84810127, 0.82758621, 0.81578947, 0.86486486, 0.84615385])
+
+pipe4: array([0.84722222, 0.81481481, 0.82857143, 0.86111111, 0.8707483])
+
+The F1 scores vary more across the pipelines, reflecting how each handles the trade-off between precision and recall. pipe1 and pipe3 show relatively consistent F1 scores, while pipe4 shows a slight improvement, particularly in the higher end of the score range (up to 0.87). This suggests that pipe4 might be slightly better balanced in handling both true positives and minimizing false positives.
+
+3. Recall
+
+Recall (also known as sensitivity) measures the proportion of actual positives correctly identified by the model.
+
+pipe1: array([0.85897436, 0.75949367, 0.79746835, 0.81012658, 0.83544304])
+
+pipe3: array([0.85897436, 0.75949367, 0.78481013, 0.81012658, 0.83544304])
+
+pipe4: array([0.78205128, 0.69620253, 0.73417722, 0.78481013, 0.81012658])
+
+Recall scores show the greatest variation across the pipelines. pipe1 and pipe3 have similar recall scores, with pipe1 slightly better overall. However, pipe4 has lower recall scores, indicating it misses more actual positive cases compared to the other pipelines. This could mean that pipe4 is more conservative in its predictions, leading to fewer false positives but at the cost of more false negatives.
+
 f1_score: 0.8842105263157894
 
 ![Confusion matrix](reports/cm_pipe1.png) 
@@ -60,12 +100,14 @@ Had the lowest accuracy among the pipelines, suggesting that its internal balanc
 
 Pipeline 3 (ADASYN):
 Showed similar trends to SMOTE but with a different synthetic data generation approach.
+
 f1_score: 0.8645833333333334
 
 ![Confusion matrix](reports/cm_pipe2.png) 
 
 Pipeline 4 (Stratified Split):
 The stratified split helped maintain the class distribution during model training and testing, leading to the highest F1 score of 0.968. This indicates that careful data splitting without additional balancing techniques can be highly effective, especially when the model naturally handles class imbalance well.
+
 f1_score: 0.968421052631579
 
 ![Confusion matrix](reports/cm_pipe4.png) 
@@ -75,6 +117,7 @@ The confusion matrix for Pipeline 4 showed strong performance, with well-balance
 
 Conclusion:
 Data balancing techniques like SMOTE and ADASYN generally improve the ability to detect fraud cases by enhancing recall. However, in this case, the baseline model with stratified data splitting outperformed others in terms of F1 score. This suggests that maintaining the natural distribution of classes during training can be more effective than applying synthetic data balancing, especially when using a model that handles class imbalance well.
+Based on the results, it is recommended to proceed with Pipeline 4 for production, as it offers the best trade-off between accuracy, precision, and recall, ensuring that fraudulent transactions are detected efficiently without overwhelming the system with false positives.
 
 7. XG Boost (Okky)
 8. Data Augmentation using schmiddy (Gibran)
