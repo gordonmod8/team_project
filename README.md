@@ -116,8 +116,11 @@ Confusion matrices were plotted for each pipeline, highlighting the performance 
 The confusion matrix for Pipeline 4 showed strong performance, with well-balanced precision and recall, further supported by the stratified data split.
 
 Conclusion:
+This analysis suggests that while all three pipelines are effective, pipe4 might be more precise but at the cost of missing some positive cases. If the goal is to minimize false negatives, pipe1 or pipe3 might be preferable. However, if minimizing false positives is more important, pipe4 might be the better choice.
+
+
 Data balancing techniques like SMOTE and ADASYN generally improve the ability to detect fraud cases by enhancing recall. However, in this case, the baseline model with stratified data splitting outperformed others in terms of F1 score. This suggests that maintaining the natural distribution of classes during training can be more effective than applying synthetic data balancing, especially when using a model that handles class imbalance well.
-Based on the results, it is recommended to proceed with Pipeline 4 for production, as it offers the best trade-off between accuracy, precision, and recall, ensuring that fraudulent transactions are detected efficiently without overwhelming the system with false positives.
+Overall, pipeline 4 offers the best trade-off between accuracy, precision, and recall, ensuring that fraudulent transactions are detected efficiently without overwhelming the system with false positives.
 
 7. XG Boost (Okky)
 8. Data Augmentation using schmiddy (Gibran)
