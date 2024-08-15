@@ -36,11 +36,31 @@
 ### Machine Learning Architecture and Problem Domain motivation
 4. Stratify (Sarita)
 5. SMOTE (Sarita)
-6. XG Boost (Okky)
-7. Data Augmentation using schmiddy (Gibran)
-8. Logistic (Gibran)
-9. AutoEncoders (Gibran)
-10. GAN (Liz)
+Since the data is highly imbalanced, simpler models showed that, despite high accuracy, they did not perform well in fraud detection. Therefore, we explored multiple balancing techniques to improve the model's performance in detecting fraudulent transactions.
+   Pipelines Implemented:
+Pipeline 1: Included SMOTE for data augmentation.
+Pipeline 2: Used BalancedRandomForestClassifier, which incorporates an internal balancing mechanism.
+Pipeline 3: Applied ADASYN for data augmentation.
+Pipeline 4: Baseline model with stratified splitting of the dataset (ensuring the class distribution is maintained in both training and test sets).
+Results:
+Pipeline 1 (SMOTE):
+Demonstrated a balanced performance with a focus on recall, which is crucial for detecting fraud cases.
+Pipeline 2 (BalancedRandomForestClassifier):
+Had the lowest accuracy among the pipelines, suggesting that its internal balancing mechanism may have affected its overall classification ability.
+Pipeline 3 (ADASYN):
+Showed similar trends to SMOTE but with a different synthetic data generation approach.
+Pipeline 4 (Stratified Split):
+The stratified split helped maintain the class distribution during model training and testing, leading to the highest F1 score of 0.968. This indicates that careful data splitting without additional balancing techniques can be highly effective, especially when the model naturally handles class imbalance well.
+Visualizations:
+Confusion matrices were plotted for each pipeline, highlighting the performance in terms of true positives, true negatives, false positives, and false negatives.
+The confusion matrix for Pipeline 4 showed strong performance, with well-balanced precision and recall, further supported by the stratified data split.
+Conclusion:
+Data balancing techniques like SMOTE and ADASYN generally improve the ability to detect fraud cases by enhancing recall. However, in this case, the baseline model with stratified data splitting outperformed others in terms of F1 score. This suggests that maintaining the natural distribution of classes during training can be more effective than applying synthetic data balancing, especially when using a model that handles class imbalance well.
+7. XG Boost (Okky)
+8. Data Augmentation using schmiddy (Gibran)
+9. Logistic (Gibran)
+10. AutoEncoders (Gibran)
+11. GAN (Liz)
 
 
 ### Tuning Hyperparameters
