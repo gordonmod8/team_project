@@ -8,12 +8,31 @@
 - There are no "Null" values in the dataset
 - The transaction amount is small. The mean of all the transaction amounts is approx. $88.
 - The dataset is highly imbalanced; 99.83% of the transactions were Non-Fraud while 0.17% of the transactions were fraud.
-![Class Distribution](src/class_dist.png)
+  
+![Class Distribution](src/class_dist.png) 
 
 - The features other than "Amount" and "Time" have gone through a PCA transformation and were anonymized.
 
-3. Data pre-processing (outliers removal, graphs) (Liz)
-   
+
+- Distributions:
+  Visualizing the distributions of the "Transaction Time" and "Transaction Amount":
+
+
+![Transaction Distribution](src/transaction_time_dist.png) 
+
+  Visualizing the distributions of all the features to check their skewness:
+  
+![All Distribution](src/all_dist.png) 
+  
+2. Data pre-processing
+
+- Created box plots to visualize the outliers
+  
+![outliers](src/outliers.png) 
+
+- Removed outliers and duplicates
+- Feature scaling: Since the other features have been scaled, we scaled the "Time" and "Amount" using StandardScaler.
+
 ### Machine Learning Architecture and Problem Domain motivation
 4. Stratify (Sarita)
 5. SMOTE (Sarita)
