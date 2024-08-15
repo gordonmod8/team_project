@@ -40,8 +40,11 @@ Since the data is highly imbalanced, simpler models showed that, despite high ac
 Pipelines Implemented:
 
 Pipeline 1: Included SMOTE for data augmentation.
+
 Pipeline 2: Used BalancedRandomForestClassifier, which incorporates an internal balancing mechanism.
+
 Pipeline 3: Applied ADASYN for data augmentation.
+
 Pipeline 4: Baseline model with stratified splitting of the dataset (ensuring the class distribution is maintained in both training and test sets).
 
 Results:
