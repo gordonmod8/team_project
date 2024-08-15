@@ -34,8 +34,7 @@
 - Feature scaling: Since the other features have been scaled, we scaled the "Time" and "Amount" using StandardScaler.
 
 ### Machine Learning Architecture and Problem Domain motivation
-4. Stratify (Sarita)
-5. SMOTE (Sarita)
+   
 Since the data is highly imbalanced, simpler models showed that, despite high accuracy, they did not perform well in fraud detection. Therefore, we explored multiple balancing techniques to improve the model's performance in detecting fraudulent transactions.
 
 Pipelines Implemented:
