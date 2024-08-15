@@ -8,8 +8,7 @@
 - There are no "Null" values in the dataset
 - The transaction amount is small. The mean of all the transaction amounts is approx. $88.
 - The dataset is highly imbalanced; 99.83% of the transactions were Non-Fraud while 0.17% of the transactions were fraud.
-
-  ![class_distribution](https://github.com/user-attachments/assets/2a0125d3-cd4e-400f-8762-cead28127ace)
+![Class Distribution](src/class_dist.png)
 
 - The features other than "Amount" and "Time" have gone through a PCA transformation and were anonymized.
 
