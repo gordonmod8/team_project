@@ -170,37 +170,34 @@ Conclusion
 
 From this analysis we concluded that data augmentation through autoencoders is a good alternative to deal with unbalanced datasets given the application of data augmentation significantly improved the model's ability to detect fraudulent transactions. Models trained with augmented data demonstrated higher accuracy, and better F1 scores compared to those trained on original datasets. This suggests that data augmentation is a viable strategy for addressing the class imbalance and improving model generalization.
 
+The GAN approach showed potential but struggled with maintaining stability during training, as seen in fluctuating discriminator accuracy.
+The pipelines using SMOTE and ADASYN provided consistently high accuracy and F1 scores, with results close to 100% in our test sets. However, the stratified approach yielded better recall, which is critical in fraud detection as accuracy is not the best metric for imbalanced datasets.
+After evaluating our pipelines, the stratified approach was chosen as the most reliable for minimizing false negatives while maintaining high precision.
+The Logistic model also has a good performance as it has the highest F1 Score of 0.81
 
 7. XG Boost (Okky)
-9. GAN (Liz)
+9. GAN
+
+Generative Adversarial Netowkr (GAN) was implemented to generate synthetic fraudulent transactions to balance the dataset. The GAN model learns the distribution of fraudulent transactions and generates realistic samples. It composes of 2 elements: the discriminator and the generator.
+The key challenge was to maintain the conditional relationships between features while addressing the data imbalance. We also conducted extensive experiments with and without early stopping to observe how training impacts the model’s discriminator and generator performance.
+
+Early stopping appears to have resulted in a more balanced training, whereas training without early stopping allowed the generator to overpower the discriminator, potentially leading to a less effective overall model. It's essential to monitor both D and G losses and consider using techniques like early stopping, regularization, or adaptive learning rates to maintain the balance between the two networks during training.
 
 
-### Tuning Hyperparameters
-To be completed
 
-12. Conclusion
-Which is the best model for highly imbalanced dataset? using SMOTE to scale the data prior to loading to XG Boost.
-For imbalanced dataset, accuracy is not a good metric so we looked at the F1 score.
-Logistic model has the highest F1 Score 0.81
 
 ### Limitations:
-XG Boost: computational power limitation across most of the methods
-GAN: generator and discriminator
+We faced GPU capacity limitations while implementing all of the methods. In the future, we would like to run the models on a cloud solution and try implementing a more fine tuned GAN model.
 
 ### Criteria
 We seek to train a model that minimizes [true fraud:predicted notfraud] and maximizes [truefraud : predicted fraud]. Undetected true fraud is strictly damaging to the financial health of the credit institution and clients. Predicting true fraud allows the institution to mitigate harms of fraud by locking the card out of any further transactions. To that extent, we seek a model that can perform better than 1:3 [true fraud:predicted notfraud] : [truefraud : predicted fraud].
 
 
-### Training / Validation Strategy
-To be completed
-
-### Data Ethics Discussion
-To be completed
 
 ### Individual Reflection Videos
 * Okky Rijanto
 * Sarita Rana
-* Elizabeth Yeo
+* Elizabeth Yeo https://drive.google.com/file/d/15_0BX8GfHM5OLTYdSAx6ccOuoLX-YPIK/view?usp=drive_link
 * Gibran Alvarez Aguilar https://youtu.be/om97Yn7_cks?si=ANkwDVrNHaUa_hbd
 * Gordon Geringas
 
