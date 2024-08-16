@@ -176,8 +176,9 @@ The key challenge was to maintain the conditional relationships between features
 
 Early stopping appears to have resulted in a more balanced training, whereas training without early stopping allowed the generator to overpower the discriminator, potentially leading to a less effective overall model. It's essential to monitor both D and G losses and consider using techniques like early stopping, regularization, or adaptive learning rates to maintain the balance between the two networks during training.
 
+![GAN](src/GAN.png) 
 
-Conclusion
+### Conclusion
 
 From this analysis we concluded that data augmentation through autoencoders is a good alternative to deal with unbalanced datasets given the application of data augmentation significantly improved the model's ability to detect fraudulent transactions. Models trained with augmented data demonstrated higher accuracy, and better F1 scores compared to those trained on original datasets. This suggests that data augmentation is a viable strategy for addressing the class imbalance and improving model generalization.
 
