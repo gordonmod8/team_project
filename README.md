@@ -249,7 +249,7 @@ We seek to train a model that minimizes [true fraud:predicted notfraud] and maxi
 
 ### Individual Reflection Videos
 * Okky Rijanto
-* Sarita Rana
+* Sarita Rana https://drive.google.com/file/d/1BRG57RgI38FPcXfEGbGufJUJm2n22Snj/view?usp=drive_link
 * Elizabeth Yeo https://drive.google.com/file/d/15_0BX8GfHM5OLTYdSAx6ccOuoLX-YPIK/view?usp=drive_link
 * Gibran Alvarez Aguilar https://youtu.be/om97Yn7_cks?si=ANkwDVrNHaUa_hbd
 * Gordon Geringas
