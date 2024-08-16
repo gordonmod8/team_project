@@ -173,9 +173,11 @@ F1 score : 0.7574750830564784
 Credit Card Fraud Detection using XGBoost with SMOTE
 
 Project Overview
+
 This project focuses on detecting fraudulent credit card transactions using advanced machine learning techniques. It utilizes the XGBoost algorithm combined with SMOTE (Synthetic Minority Over-sampling Technique) to address the challenge of class imbalance typically found in fraud detection datasets. The project includes data preprocessing, model building, evaluation, and a series of visualizations to aid in understanding the data and model performance.
 
 Project Structure
+
 1.	Data Preprocessing:
 o	The project begins with loading and preprocessing the dataset. This includes tasks such as cleaning the data, handling missing values, scaling features, and preparing the data for model training by splitting it into training and testing sets.
 2.	Class Imbalance Handling with SMOTE:
