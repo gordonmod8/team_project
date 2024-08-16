@@ -122,7 +122,7 @@ This analysis suggests that while all three pipelines are effective, pipe4 might
 Data balancing techniques like SMOTE and ADASYN generally improve the ability to detect fraud cases by enhancing recall. However, in this case, the baseline model with stratified data splitting outperformed others in terms of F1 score. This suggests that maintaining the natural distribution of classes during training can be more effective than applying synthetic data balancing, especially when using a model that handles class imbalance well.
 Overall, pipeline 4 offers the best trade-off between accuracy, precision, and recall, ensuring that fraudulent transactions are detected efficiently without overwhelming the system with false positives.
 
-Data Augmentation with Autoencoders on Logistic Regression and Random Forest
+### Data Augmentation with Autoencoders on Logistic Regression and Random Forest
 
 For the Data Augmentation technique we used the deep_tubular_augmentation package made by the blogger lschmiddey, this package uses deep learning Autoencoders Autoencoders to statistically create a synthethic or "augmented" dataset to feed other ML or DL models. We used this technice to balance the dataset from section "1. Data exploration" of this file, the DL model created synthethic fraud datapoints that are statistically similar to the original fraud data. 
 
