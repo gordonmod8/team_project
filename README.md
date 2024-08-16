@@ -201,7 +201,7 @@ To be completed
 * Okky Rijanto
 * Sarita Rana
 * Elizabeth Yeo
-* Gibran Alvarez Aguilar
+* Gibran Alvarez Aguilar https://youtu.be/om97Yn7_cks?si=ANkwDVrNHaUa_hbd
 * Gordon Geringas
 
 ### Repo File and Folder Structures
