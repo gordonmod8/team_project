@@ -166,14 +166,7 @@ F1 score : 0.7574750830564784
 ![image](https://github.com/user-attachments/assets/ed9e1b37-4a2f-44f7-92ea-5595d525a919)
 
 
-Conclusion
 
-From this analysis we concluded that data augmentation through autoencoders is a good alternative to deal with unbalanced datasets given the application of data augmentation significantly improved the model's ability to detect fraudulent transactions. Models trained with augmented data demonstrated higher accuracy, and better F1 scores compared to those trained on original datasets. This suggests that data augmentation is a viable strategy for addressing the class imbalance and improving model generalization.
-
-The GAN approach showed potential but struggled with maintaining stability during training, as seen in fluctuating discriminator accuracy.
-The pipelines using SMOTE and ADASYN provided consistently high accuracy and F1 scores, with results close to 100% in our test sets. However, the stratified approach yielded better recall, which is critical in fraud detection as accuracy is not the best metric for imbalanced datasets.
-After evaluating our pipelines, the stratified approach was chosen as the most reliable for minimizing false negatives while maintaining high precision.
-The Logistic model also has a good performance as it has the highest F1 Score of 0.81
 
 7. XG Boost (Okky)
 9. GAN
@@ -184,7 +177,14 @@ The key challenge was to maintain the conditional relationships between features
 Early stopping appears to have resulted in a more balanced training, whereas training without early stopping allowed the generator to overpower the discriminator, potentially leading to a less effective overall model. It's essential to monitor both D and G losses and consider using techniques like early stopping, regularization, or adaptive learning rates to maintain the balance between the two networks during training.
 
 
+Conclusion
 
+From this analysis we concluded that data augmentation through autoencoders is a good alternative to deal with unbalanced datasets given the application of data augmentation significantly improved the model's ability to detect fraudulent transactions. Models trained with augmented data demonstrated higher accuracy, and better F1 scores compared to those trained on original datasets. This suggests that data augmentation is a viable strategy for addressing the class imbalance and improving model generalization.
+
+The GAN approach showed potential but struggled with maintaining stability during training, as seen in fluctuating discriminator accuracy.
+The pipelines using SMOTE and ADASYN provided consistently high accuracy and F1 scores, with results close to 100% in our test sets. However, the stratified approach yielded better recall, which is critical in fraud detection as accuracy is not the best metric for imbalanced datasets.
+After evaluating our pipelines, the stratified approach was chosen as the most reliable for minimizing false negatives while maintaining high precision.
+The Logistic model also has a good performance as it has the highest F1 Score of 0.81
 
 ### Limitations:
 We faced GPU capacity limitations while implementing all of the methods. In the future, we would like to run the models on a cloud solution and try implementing a more fine tuned GAN model.
