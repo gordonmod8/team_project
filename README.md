@@ -126,9 +126,10 @@ Data Augmentation with Autoencoders on Logistic Regression and Random Forest
 
 For the Data Augmentation technique we used the deep_tubular_augmentation package made by the blogger lschmiddey, this package uses deep learning Autoencoders Autoencoders to statistically create a synthethic or "augmented" dataset to feed other ML or DL models. We used this technice to balance the dataset from section "1. Data exploration" of this file, the DL model created synthethic fraud datapoints that are statistically similar to the original fraud data. 
 
-In the following graphic you can see how the synthetic data resembles in shape to the original dataset.
+In the following graphic you can see how the synthetic data on the bottom left resembles in shape to the original fraud datapoint on the top right.
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/57288c24-0ae5-429d-b713-2ab7b55ffb5f)
+
 
 We then mixed this new synthetic data with our original one to train and fit First a Logistic Regresion model, and second a Random Forest model we then compraed them respectively with models trained without synthetic data, the results are shown below.
 
@@ -137,29 +138,33 @@ Logistic Regression Original Data
 Accuracy: 0.9985487400957364
 F1 score : 1.5466666667
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/0107b630-e0d2-4f9f-b0a5-59e7b6b934cc)
+
 
 Logistic Regression  Synthetic Data
 
 Accuracy: 0.9993797034280163
 F1 score : 0.8140350877192982
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/5972f2c5-bc49-4d62-9f22-8a034102467b)
+
 
 
 Random Forest Original Data
 
 Accuracy: 0.9985253326779256
-F1 score : 
+F1 score : 1.5263157895
 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/281b4100-c961-4e30-94e8-5d3e5c9268d0)
+
 
 Random Forest  Synthetic Data
 
 Accuracy: 0.9991456292499094
 F1 score : 0.7574750830564784
 
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/ed9e1b37-4a2f-44f7-92ea-5595d525a919)
+
 
 Conclusion
 
