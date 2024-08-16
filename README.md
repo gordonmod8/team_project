@@ -191,9 +191,13 @@ o	Visual tools like the Confusion Matrix and ROC Curve are used to further valid
 Results and Insights
 
 Accuracy: 0.999385555282469
+
 Precision: 0.8118811881188119
+
 Recall: 0.8367346938775511
+
 F1 Score: 0.8241206030150754
+
 
 Confusion Matrix:
 [[56845    19]
