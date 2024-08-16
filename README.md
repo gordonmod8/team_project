@@ -169,6 +169,52 @@ F1 score : 0.7574750830564784
 
 
 7. XG Boost (Okky)
+
+Credit Card Fraud Detection using XGBoost with SMOTE
+
+Project Overview
+This project focuses on detecting fraudulent credit card transactions using advanced machine learning techniques. It utilizes the XGBoost algorithm combined with SMOTE (Synthetic Minority Over-sampling Technique) to address the challenge of class imbalance typically found in fraud detection datasets. The project includes data preprocessing, model building, evaluation, and a series of visualizations to aid in understanding the data and model performance.
+
+Project Structure
+1.	Data Preprocessing:
+o	The project begins with loading and preprocessing the dataset. This includes tasks such as cleaning the data, handling missing values, scaling features, and preparing the data for model training by splitting it into training and testing sets.
+2.	Class Imbalance Handling with SMOTE:
+o	Due to the inherent class imbalance in fraud detection, where fraudulent transactions are rare, SMOTE is applied to oversample the minority class. This technique helps the model to learn effectively from both classes and avoid bias towards the majority class.
+3.	Model Development with XGBoost:
+o	The project leverages XGBoost, a powerful gradient boosting algorithm known for its efficiency and accuracy. The model is trained with careful hyperparameter tuning to optimize its performance on the given dataset.
+4.	Model Evaluation and Validation:
+o	Comprehensive evaluation of the model is carried out using metrics such as Accuracy, Precision, Recall, F1-Score, and ROC-AUC. These metrics provide insight into the model's performance and its ability to correctly identify fraudulent transactions.
+o	Visual tools like the Confusion Matrix and ROC Curve are used to further validate the model’s predictions.
+
+Results and Insights
+
+Accuracy: 0.999385555282469
+Precision: 0.8118811881188119
+Recall: 0.8367346938775511
+F1 Score: 0.8241206030150754
+
+Confusion Matrix:
+[[56845    19]
+ [   16    82]]
+
+The model developed in this project effectively detects fraudulent transactions, with the integration of SMOTE significantly enhancing its performance by ensuring balanced learning. The evaluation metrics indicate strong model performance, particularly in terms of Recall, which is crucial for identifying fraud.
+Key Results:
+•	High Accuracy in detecting fraudulent transactions while maintaining a balance with false positives.
+•	Improved Recall due to the application of SMOTE, ensuring that most fraudulent cases are captured.
+•	ROC-AUC Score demonstrating the model's ability to distinguish between fraudulent and non-fraudulent transactions effectively.
+
+Conclusion
+
+The application of XGBoost in this project has proven effective for handling complex datasets, particularly in managing the class imbalance inherent in credit card fraud detection. By leveraging SMOTE to oversample the minority class, the model is better equipped to identify fraudulent transactions, which is crucial for accurate fraud detection.
+
+While the model achieved an impressive accuracy of 0.999, the F1 score of 0.82 suggests there is room for improvement in balancing false positives and false negatives. To further enhance the model's performance and ensure it generalizes well:
+
+Hyperparameter Tuning and Cross-Validation: These techniques should be employed to optimize the model and prevent overfitting, potentially improving the balance between Precision and Recall.
+Adjusting the Random State: Experimenting with different random state values has shown potential to increase the F1 score, indicating a better trade-off between false positives and false negatives.
+By focusing on these strategies, the model’s effectiveness in real-world fraud detection scenarios can be significantly enhanced.
+
+
+
 9. GAN
 
 Generative Adversarial Netowkr (GAN) was implemented to generate synthetic fraudulent transactions to balance the dataset. The GAN model learns the distribution of fraudulent transactions and generates realistic samples. It composes of 2 elements: the discriminator and the generator.
