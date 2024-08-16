@@ -122,11 +122,52 @@ This analysis suggests that while all three pipelines are effective, pipe4 might
 Data balancing techniques like SMOTE and ADASYN generally improve the ability to detect fraud cases by enhancing recall. However, in this case, the baseline model with stratified data splitting outperformed others in terms of F1 score. This suggests that maintaining the natural distribution of classes during training can be more effective than applying synthetic data balancing, especially when using a model that handles class imbalance well.
 Overall, pipeline 4 offers the best trade-off between accuracy, precision, and recall, ensuring that fraudulent transactions are detected efficiently without overwhelming the system with false positives.
 
+Data Augmentation with Autoencoders on Logistic Regression and Random Forest
+
+For the Data Augmentation technique we used the deep_tubular_augmentation package made by the blogger lschmiddey, this package uses deep learning Autoencoders Autoencoders to statistically create a synthethic or "augmented" dataset to feed other ML or DL models. We used this technice to balance the dataset from section "1. Data exploration" of this file, the DL model created synthethic fraud datapoints that are statistically similar to the original fraud data. 
+
+In the following graphic you can see how the synthetic data resembles in shape to the original dataset.
+
+![alt text](image.png)
+
+We then mixed this new synthetic data with our original one to train and fit First a Logistic Regresion model, and second a Random Forest model we then compraed them respectively with models trained without synthetic data, the results are shown below.
+
+Logistic Regression Original Data
+
+Accuracy: 0.9985487400957364
+F1 score : 1.5466666667
+
+![alt text](image-1.png)
+
+Logistic Regression  Synthetic Data
+
+Accuracy: 0.9993797034280163
+F1 score : 0.8140350877192982
+
+![alt text](image-2.png)
+
+
+Random Forest Original Data
+
+Accuracy: 0.9985253326779256
+F1 score : 
+
+![alt text](image-4.png)
+
+Random Forest  Synthetic Data
+
+Accuracy: 0.9991456292499094
+F1 score : 0.7574750830564784
+
+![alt text](image-3.png)
+
+Conclusion
+
+From this analysis we concluded that data augmentation through autoencoders is a good alternative to deal with unbalanced datasets given the application of data augmentation significantly improved the model's ability to detect fraudulent transactions. Models trained with augmented data demonstrated higher accuracy, and better F1 scores compared to those trained on original datasets. This suggests that data augmentation is a viable strategy for addressing the class imbalance and improving model generalization.
+
+
 7. XG Boost (Okky)
-8. Data Augmentation using schmiddy (Gibran)
-9. Logistic (Gibran)
-10. AutoEncoders (Gibran)
-11. GAN (Liz)
+9. GAN (Liz)
 
 
 ### Tuning Hyperparameters
